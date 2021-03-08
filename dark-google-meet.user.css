@@ -1,0 +1,127 @@
+/* ==UserStyle==
+@name           Dark Google Meet
+@namespace      github.com/simbabque
+@version        1.0.0
+@description    Dark Mode for Google Meet
+@author         Julien Fiegehenn
+@preprocessor   less
+==/UserStyle== */
+// Variables
+@background: #1f1f1f;
+@background-highlight: #2d2d2d;
+@border: #757575;
+@font: #d6d6d6;
+@icon: white;
+@icon-hover: rgba(32, 33, 36, 0.039);
+@icon-hover: rgba(174, 12, 101, .039);
+@-moz-document domain("meet.google.com") {
+
+    /* header bar */
+    header#gb {
+        background-color: @background-highlight !important;
+
+        /* clock and icons */
+        .gb_se i,
+        svg,
+        .v1pyg {
+            color: @icon;
+            opacity: 0.7;
+        }
+
+        /* TODO :hover */
+    }
+
+    /* main page containers */
+    .T4LgNb, .p2ZbV.zKHdkd {
+        background-color: @background;
+        color: @font;
+    }
+
+    /* upcoming meetings list */
+    .VdLOD,
+    .mtr0Je {
+        background-color: @background-highlight;
+
+        &,
+        .AKhouc {
+            color: @font;
+        }
+    }
+
+    /** Join Video Call */
+
+    /* account name at top right */
+    .Ue6DPb {
+        color: @font;
+    }
+
+    /** Video Call */
+
+    /* top button bar in video call */
+    .NzPR9b {
+        background-color: @background-highlight !important;
+
+        span i,
+        svg,
+        .wnPUne {
+            color: @font;
+        }
+    }
+
+
+    /* bottom bar in video call */
+    .rG0ybd {
+        background-color: @background !important;
+
+        /* buttons */
+        .Jyj1Td,
+        .sPXonc,
+        .YhIwSc,
+        span i,
+        svg {
+            color: @font;
+        }
+
+        /* round buttons */
+        .A00RE,
+        .JRY2Pb {
+            border: 1px solid @border;
+            color: @icon;
+
+
+            /* hanging up */
+            .grFr5 svg {
+                color: #d93025 !important;
+            }
+
+            /* TODO non-red icons */
+        }
+    }
+
+    /* call info popup in video call */
+    div[role=dialog], & div[role="button"] {
+        background-color: @background;
+        color: @font;
+
+        .NPEfkd, .DX090c {
+          color: @font;
+        }
+    }
+
+    /** You've left the meeting */
+    /* rating box */
+    .S6Idlc {
+        background-color: @background-highlight;
+        .qpp46, .DGSref span {
+            color: @font;
+        }
+    }
+    span[role=tabpanel] {
+        background-color: @background-highlight;
+
+        div[role=menuitemcheckbox]:hover {
+            background-color: @background;
+        }
+    }
+
+}
